@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probability Distributions Quiz</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Probability Distributions Quiz</h1>
+        <div class="mode-toggle">
+    <button id="study-mode-btn">Study Mode</button>
+    <button id="quiz-mode-btn" class="hidden">Quiz Mode</button>
+</div>
+
+        <div id="quiz-container">
+            <div id="plot-container"></div>
+            <div id="formula-container" class="hidden"></div>
+            <div id="controls">
+                <input type="text" id="answer-input" placeholder="Enter distribution name">
+                <button id="submit-btn">Submit</button>
+                <button id="next-btn" class="hidden">Next Question</button>
+            </div>
+            <div id="feedback"></div>
+            <div id="progress"></div>
+        </div>
+<div id="study-mode" class="hidden">
+    <h2>Study Mode - All Distributions</h2>
+    <div id="distributions-grid"></div>
+</div>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>

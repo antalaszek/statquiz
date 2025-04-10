@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+    command: flask run --host=0.0.0.0
+    volumes:
+      - ./backend:/app
+    ports:
+      - "5001:5000"
+    environment:
+      - FLASK_APP=app
+      - FLASK_ENV=development
+    networks:
+      - quiz-network
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - quiz-network
+
+networks:
+  quiz-network:
